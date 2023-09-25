@@ -5,11 +5,12 @@ set -e
 ###
 # Installation of packages, configurations, and dotfiles.
 ###
-DOTFILES_LOCATION=$(pwd)
+DOTFILES_LOCATION=$(dirname $0);
 export DOTFILES_LOCATION;
-
+cd $DOTFILES_LOCATION;
 ###
 # Install dependencies
 ###
-./bin/dotfiles install omz
-./bin/dotfiles install zsh
+./bin/dotfiles install omz;
+./bin/dotfiles install zsh;
+cd -;
